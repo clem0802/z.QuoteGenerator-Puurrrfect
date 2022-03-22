@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Chewy&family=Poppins:wght@500&display=swap');
+    </style> 
+
+    <title>Purrrfect</title>
+
+  </head>
+  <body>
+
+    <!-- Modals -->
+    <div class="modal fade" id="aboutModal" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">About</h4>
+          </div>
+
+          <div class="modal-body">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, suscipit omnis adipisci aut blanditiis accusamus impedit quos praesentium est cumque aperiam nihil molestias officia quaerat accusantium cupiditate rem vero unde.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default close-about" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      
+      </div>
+    </div>
+  
+    <!-- HEADER -->
+    <div class="grid-header"> 
+
+      <div class="site-title">
+        <h1 class="purrfect-title">Puurrrfect</h1>
+
+        <div class="title-paw">
+          <img src="White_Paw.png" width="50" height="50" alt="" class="title-paw-img">
+        </div>
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="nav-container">
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+                    
+        <div class="nav-menu">
+          <a href="" class="nav-link">Home</a>
+          <a href="#aboutModal" class="nav-link" data-toggle="modal" data-target="#aboutModal">About</a>
+          <a id="contact-btn" class="nav-link">Contact</a>
+        </div>
+
+      </div>
+
+    </div>
+                                 
+    <!-- Contact Us Section -->
+    <div id="contact-popup">
+      <form id="pop-up" onsubmit="event.preventDefault(); validateForm()">
+
+        <h3 id="contact-title">Contact Us</h3>
+
+        <span>
+          <label for="your-name">Name:</label><br>
+          <input type="text" id="your-name" name="name" placeholder="Your Name"><br>
+          <small class="error"></small>
+        </span><br>
+
+        <span>
+          <label for="email">Email:</label><br>
+          <input type="text" id="email" name="email" placeholder="Your Email"><br>
+          <small class="error"></small>
+        </span><br>
+
+        <span>
+          <label for="email">Message:</label><br>
+          <textarea id="message" name="message" placeholder="Your Message" rows="6"></textarea><br>
+          <small class="error"></small><br>
+        </span>
+
+        <div id="button-container">
+          <button type="submit" id="send-btn">Send</button>
+          <button id="close-btn">Close</button>
+        </div>
+
+        <div id="bottom-container">
+          <img  id="blue-paw-box" src="Blue_Paw.png" width="40" height="40" alt="blue paw">
+          <small class="success"></small>
+        </div>
+
+      </form>   
+    </div>
+
+    
+    <div class="grid-container">
+
+      <!-- Main -->
+      <div class="grid-main">
+
+          <div class="main-top">
+            <div class="quote-area">
+              <p class="quote" id="quote">IF YOU CAN DREAM IT YOU CAN DO IT</p>
+              <span id="author">Walt Disney</span>
+              <img src="White_Paw.png" alt="" width="50" height="50" class="transparent-paw">
+
+              <div class="inspire-button">
+              Inspire Me
+              </div>
+
+            </div>
+          </div>
+
+          <div class="main-middle">
+            <div class="middle-heading">
+              The Quote Generator for Animal Lovers
+            </div>
+
+            <div class="rabbits-text-area">
+              <div class="rabbit-1"><img src="bunnywhite.png" alt="" height="100" width="100"> 
+              </div>
+
+              <div class="proven-text-area">
+              It has been proven by science that looking at cute animals reduces blood pressure, heart rate and anxiety.
+              </div>
+
+              <div class="rabbit-2">
+              <img src="bunnywhite.png" alt="" height="100" width="100" class="mirror-bunny"> 
+              </div>
+            </div>  
+          </div>
+
+          <div class="main-bottom">
+            <img src="dog.jpeg" alt="dog" class="puppy-image" id="dog" onclick="firstImage()">
+            <img src="puppy.jpg" alt="puppy and kitten" class="dog-image" id="puppy" onclick="secondImage()">
+            <img src="rabbit.jpg" alt="rabbit" class="rabbit-image" id="rabbit" onclick="thirdImage()">
+          </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="grid-footer"> 
+          
+          <div class="social-media">
+                
+          <a href="http://www.github.com" target="_blank">
+          <i class="fab fa-github"></i></a>
+
+          <a href="http://www.twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i></a>
+
+          <a href="http://www.facebook.com" target="_blank">
+          <i class="fab fa-facebook"></i></a>  
+
+          <a href="http://www.instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i></a>
+        </div>  
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+<!-- "HeroToFu Contact Form"
+<form action="https://public.herotofu.com/v1/1d5bc7a0-a0bd-11ec-bdf8-dd9c99f898ec" method="post">
+  <div>
+    <label for="name">Your Name</label>
+    <input name="Name" id="name" type="text" required />
+  </div>
+  <div>
+    <label for="email">Your Email</label>
+    <input name="Email" id="email" type="email" required  />
+  </div>
+  <div>
+    <input type="submit" value="Download CTA" />
+  </div>
+</form> -->
+
